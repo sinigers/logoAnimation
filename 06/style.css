@@ -1,87 +1,93 @@
-body{
-  background-color: #000;
+body {
+  background-color: #131313;
 }
 
-svg{
-	position:absolute;
-    margin: auto;
+svg {
+  /* position:absolute; */
+  /* margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
+}
 
-	}
+
+.wrapper {
+  display: flex;
+  /* width: 360px; */
+  padding: 24px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0px;
+  flex-wrap: wrap;
+}
 
 path {
-	
-	stroke:#A6CE39;
-	
-	}
-	
-#sign {
-	stroke-width:0.9;
-	fill: #A6CE39;
-	fill-opacity: 0;
-	stroke-dasharray:350;
-	stroke-dashoffset:350;
-		
-	animation-name: logo;
-	animation-duration: 8s;
-	animation-iteration-count: infinite;
+  stroke: #a6ce39;
+}
 
-	}
+#sign {
+  stroke-width: 0.9;
+  fill: #a6ce39;
+  fill-opacity: 0;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+
+  animation-name: logo;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
 
 #brand {
-	fill:#A6CE39;
-	fill-opacity: 0;
-	stroke:none;
-		
-	animation-name: subtext;
-	animation-duration: 8s;
-	animation-timing-function: ease;
-	/*It seems that "animation-delay: Xs;"
+  fill: #a6ce39;
+  fill-opacity: 0;
+  stroke: none;
+
+  animation-name: subtext;
+  animation-duration: 8s;
+  animation-timing-function: ease;
+  /*It seems that "animation-delay: Xs;"
 	 * doesn't work when "animation-iteration-count: infinite"
 	 *  */
-	animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
 
-	}
-	
 @keyframes logo {
-	0% {
-		stroke-dashoffset:350;
-		fill-opacity: 0;
-		}
+  0% {
+    stroke-dashoffset: 350;
+    fill-opacity: 0;
+  }
 
-	5% {
-		stroke-dashoffset:350;
-		fill-opacity: 0;
-		}
-	40% {
-		stroke-dashoffset:55;
-		fill-opacity: 0;
-				
-		}
-	80% {
-		stroke-dashoffset:0;
-		fill-opacity: 1;
-		}	
-	100% {
-		stroke-dashoffset:0;
-		fill-opacity: 1;
-		}
-	}
+  5% {
+    stroke-dashoffset: 350;
+    fill-opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 55;
+    fill-opacity: 0;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
 
 @keyframes subtext {
-	0% {
-		fill-opacity:0;
-		}
-	40% {
-		fill-opacity:0;
-		}
-	80% {
-		fill-opacity:1;
-		}
-	100% {
-		fill-opacity:1;
-		}
-	}
+  0% {
+    fill-opacity: 0;
+  }
+  40% {
+    fill-opacity: 0;
+  }
+  80% {
+    fill-opacity: 1;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
