@@ -1,0 +1,74 @@
+body {
+  background: #000;
+}
+
+//Drawing line scale
+@keyframes logoMotion {
+  0% { transform: scale(0.75); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: scale(0.6); opacity: 1; }
+}
+
+//Drawing bg img
+@keyframes bgMotion {
+  0% { transform: scale(0.75); opacity: 0; }
+  70% { opacity: 0; }
+  100% { transform: scale(0.6); opacity: 1; }
+}
+
+//Drawing line path
+@keyframes logoPathDraw {
+  0% { stroke-dashoffset: 1000;}
+  100% { stroke-dashoffset: 0;}
+}
+
+.logo_animation {
+   width: 870px;
+   height: 340px;
+   position: absolute;
+   margin: auto;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+  #logo {
+    z-index: 10;
+    position: absolute;
+    width: 870px;
+    height: 340px;
+    transform-origin: center center;
+    .pathLine {
+      fill: none;
+      stroke: url(#gradient);
+      stroke-width: 2;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+      filter: url(#glow);
+      //For small text
+      &.small {
+        stroke-width: 2;
+      }
+    }
+  }
+  .img__bg {
+    z-index: 9;
+    margin: 0;
+    position: absolute;
+    width: 870px;
+    height: 340px;
+    background-image: url('http://www.vicchoutw.com//codepen/images/svg/logoDraw/logoBg.png');
+  }
+  
+  //Animation Start
+  &.active {
+    #logo {
+      animation: logoMotion 5000ms ease-in-out 0ms 1 normal forwards;
+      .pathLine {
+        animation: logoPathDraw 5000ms ease-in-out 0ms 1 normal forwards;
+      }
+    }
+    .img__bg {
+      animation: bgMotion 5000ms ease-in-out 0ms 1 normal forwards;
+    }
+  }
+}

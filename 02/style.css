@@ -1,0 +1,22 @@
+html,body {
+  background:#000;
+  overflow:hidden;
+}
+
+div, img {
+  position:absolute;
+}
+
+#logo {
+  opacity:0;
+  width:293px;
+  height:155px;
+  left:50%;
+  top:50%;
+  margin-left:-146px;
+  margin-top:-77px;
+}
+
+.flare {
+  mix-blend-mode: screen;
+}

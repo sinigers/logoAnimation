@@ -1,0 +1,52 @@
+:root {
+  --duration: 4.5s;
+  --color: #A6CE39;
+  --looping: infinite;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #444;
+}
+
+.logo {
+  fill: var(--color);
+  /* Hack to ensure that 2px stroke width isn't cut off */
+  overflow: visible;
+
+  animation-name: fill;
+  animation-duration: var(--duration);
+  animation-iteration-count: var(--looping);
+  animation-timing-function: ease;
+}
+
+.logo path {
+  stroke: var(--color);
+  stroke-width: 2px;
+
+  /* 985 is the length of the svg path */
+  stroke-dasharray: 985;
+  stroke-dashoffset: 985;
+
+  animation-name: line;
+  animation-duration: var(--duration);
+  animation-iteration-count: var(--looping);
+  animation-timing-function: ease-out;
+}
+
+@keyframes line {
+  33%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  0%,
+  45% {
+    fill: transparent;
+  }
+}

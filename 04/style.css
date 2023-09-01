@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+/* BASIC CSS */
+* { padding: 0; margin: 0; }
+body{ font-family: 'Montserrat', sans-serif; background: #082340; }
+h1{ color: #A6CE39; margin-top: -10px; font-size: 3vw; } 
+.container { text-align: center; margin-top: 50vh; transform: translate(0, -50%); } 
+.container svg { width: 20%; }
+
+
+/* ANIMATED ITEMS */ 
+.logo .st0 { stroke: #fff !important; stroke-dasharray: 100; stroke-linecap: round; opacity: 0; stroke-dashoffset: 100; } 
+
+/* setting delays */
+.logo .st0:nth-last-child(4) { animation: appear 2s ease forwards; } /* First child */
+.logo .st0:nth-last-child(3) { animation: appear 2s ease forwards; animation-delay: 0.2s; } /* Second Child */
+.logo .st0:nth-last-child(2) { animation: appear 2s ease forwards; animation-delay: 0.4s; } /* Third Child */
+.logo .st0:last-child { animation: appear 2s ease forwards; animation-delay: 0.6s; } /* 4th / last child */
+
+/* FADING H1 */
+h1{ animation: fade 2s ease forwards; opacity: 0; animation-delay: 1s; }  
+
+
+/* ANIMATIONS */
+@-webkit-keyframes appear {
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+@-webkit-keyframes fade {
+  to { opacity: 1; }
+}

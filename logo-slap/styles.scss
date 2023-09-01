@@ -1,0 +1,92 @@
+body {
+  background: #fafbfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+.sign {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 86px;
+  margin-top: 8px;
+}
+.old-sign {
+  margin-top: 10px;
+  width: 100px;
+  margin-left: 32px;
+}
+.new-sign {
+  width: 170px;
+}
+.container {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #1d1e22;
+}
+
+.slots-overwrap {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.slots-wrap {
+  height: 66px;
+  width: 176px;
+  display: inline-block;
+  margin: auto;
+  overflow: hidden;
+  // border: 1px solid #c2bfbf;
+}
+
+.slots {
+  position: relative;
+  display: block;
+  top:-840px;
+  z-index: 1;
+  width: 100%;
+}
+
+.slots {
+  animation: slot-animation 1.8s;
+  animation-timing-function: cubic-bezier(0.36, 1.28, 0.75, 1.1);
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.slot {
+  height: 70px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes slot-animation {
+  0% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(12 * 71px);
+  }
+}
+
+.sign {
+  animation: sign-animation 1.8s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.25, 1.55);
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+
+@keyframes sign-animation {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(-2 * 2px);
+  }
+}
