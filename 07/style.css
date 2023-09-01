@@ -1,0 +1,22 @@
+body {
+  background-color: #131313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+path{
+	animation : monanimation 6s infinite;
+	 stroke-dasharray: 1000;
+	 fill : #131313;
+	 stroke: #A6CE39;
+}
+
+@keyframes monanimation{
+  0%{ stroke-dashoffset: 1000;
+ 	fill : #131313; }
+ 20%{fill : #131313;}
+ 70%{stroke-dashoffset: 0;}
+100%{stroke : #131313;}
+}
