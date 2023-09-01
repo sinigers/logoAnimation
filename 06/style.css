@@ -14,12 +14,11 @@ svg {
 
 .wrapper {
   display: flex;
-  /* width: 360px; */
-  padding: 24px;
+  padding: 16px;
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 0px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -35,7 +34,7 @@ path {
   stroke-dashoffset: 350;
 
   animation-name: logo;
-  animation-duration: 8s;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
 }
 
@@ -45,7 +44,7 @@ path {
   stroke: none;
 
   animation-name: subtext;
-  animation-duration: 8s;
+  animation-duration: 7s;
   animation-timing-function: ease;
   /*It seems that "animation-delay: Xs;"
 	 * doesn't work when "animation-iteration-count: infinite"
@@ -63,8 +62,8 @@ path {
     stroke-dashoffset: 350;
     fill-opacity: 0;
   }
-  50% {
-    stroke-dashoffset: 55;
+  40% {
+    stroke-dashoffset: 25;
     fill-opacity: 0;
   }
   80% {
