@@ -1,19 +1,12 @@
 body {
-  background: #000;
+  background: #131313;
 }
 
 //Drawing line scale
 @keyframes logoMotion {
-  0% { transform: scale(0.75); opacity: 0; }
+  0% { transform: scale(1); opacity: 0; }
   50% { opacity: 1; }
-  100% { transform: scale(0.6); opacity: 1; }
-}
-
-//Drawing bg img
-@keyframes bgMotion {
-  0% { transform: scale(0.75); opacity: 0; }
-  70% { opacity: 0; }
-  100% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 1; }
 }
 
 //Drawing line path
@@ -44,20 +37,9 @@ body {
       stroke-dasharray: 1000;
       stroke-dashoffset: 0;
       filter: url(#glow);
-      //For small text
-      &.small {
-        stroke-width: 2;
-      }
     }
   }
-  .img__bg {
-    z-index: 9;
-    margin: 0;
-    position: absolute;
-    width: 870px;
-    height: 340px;
-    background-image: url('http://www.vicchoutw.com//codepen/images/svg/logoDraw/logoBg.png');
-  }
+
   
   //Animation Start
   &.active {
@@ -67,8 +49,6 @@ body {
         animation: logoPathDraw 5000ms ease-in-out 0ms 1 normal forwards;
       }
     }
-    .img__bg {
-      animation: bgMotion 5000ms ease-in-out 0ms 1 normal forwards;
-    }
+   
   }
 }

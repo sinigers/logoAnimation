@@ -57,29 +57,16 @@ body {
 }
 
 .slots {
-  -webkit-animation: slot-animation 1.8s;
-          animation: slot-animation 1.8s;
-  -webkit-animation-timing-function: cubic-bezier(0.36, 1.28, 0.75, 1.1);
-          animation-timing-function: cubic-bezier(0.36, 1.28, 0.75, 1.1);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: slot-animation 1.8s;
+  animation-timing-function: cubic-bezier(0.36, 1.28, 0.75, 1.1);
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 
 .slot {
   height: 70px;
   margin: 0;
   box-sizing: border-box;
-}
-
-@-webkit-keyframes slot-animation {
-  0% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(852px);
-  }
 }
 
 @keyframes slot-animation {
@@ -91,23 +78,10 @@ body {
   }
 }
 .sign {
-  -webkit-animation: sign-animation 1.8s;
-          animation: sign-animation 1.8s;
-  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.25, 1.55);
-          animation-timing-function: cubic-bezier(0.68, -0.55, 0.25, 1.55);
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-@-webkit-keyframes sign-animation {
-  0% {
-    transform: translateX(30px);
-  }
-  100% {
-    transform: translateX(-4px);
-  }
+  animation: sign-animation 1.8s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.25, 1.55);
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
 }
 
 @keyframes sign-animation {
