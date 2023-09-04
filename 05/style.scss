@@ -1,5 +1,9 @@
 body {
-  background: #131313;
+  background-color: #131313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 //Drawing line scale
@@ -16,7 +20,7 @@ body {
 }
 
 .logo_animation {
-   width: 870px;
+   width: 400px;
    height: 340px;
    position: absolute;
    margin: auto;
@@ -27,7 +31,7 @@ body {
   #logo {
     z-index: 10;
     position: absolute;
-    width: 870px;
+    width: 400px;
     height: 340px;
     transform-origin: center center;
     .pathLine {
